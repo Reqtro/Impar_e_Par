@@ -1,0 +1,39 @@
+/*Crie um algoritmo onde o usuário entra com vários números inteiros e positivos. Quando o
+usuário entrar com um número negativo o algoritmo encerra e traz o resultado do produto para
+os números ímpares e a soma para os números pares. O exemplo abaixo representa uma entrada
+e a respectiva saída dada pelo algoritmo. 
+package e1_lista;
+*/
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author reqtr
+ */
+public class E1_Lista {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int numero = 1;
+        int somaPar = 0;
+        int produtoImpar = 1;
+        Scanner sc = new Scanner(System.in);
+        while( numero > 0){
+            System.out.println("Digite um numero inteiro e positivo:");
+            numero = sc.nextInt();
+            if (numero >0){
+                if ((numero%2)==0) {
+                    somaPar = numero + somaPar;
+                }
+                else
+                    produtoImpar = numero * produtoImpar;
+            }
+        }
+        System.out.println("A soma dos numeros pares e: " + somaPar);
+        System.out.println("O produto dos numeros impares e: " + produtoImpar);
+    }
+}
